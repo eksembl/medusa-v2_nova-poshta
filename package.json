@@ -1,0 +1,41 @@
+{
+  "name": "medusa-fulfillment-novaposhta-v2",
+  "version": "2.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --watch",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@medusajs/framework": "2.15.3",
+    "axios": "^1.7.0",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "@medusajs/admin-sdk": ">=2.0.0",
+    "@medusajs/ui": ">=4.0.0",
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@medusajs/admin-sdk": {
+      "optional": true
+    },
+    "@medusajs/ui": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vitest": "^3.2.4"
+  }
+}
